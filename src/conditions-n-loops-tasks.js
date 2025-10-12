@@ -65,8 +65,12 @@ function getMaxNumber(a, b, c) {
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  */
-function canQueenCaptureKing(/* queen, king */) {
-  throw new Error('Not implemented');
+function canQueenCaptureKing(queen, king) {
+  return (
+    queen.x === king.x ||
+    queen.y === king.y ||
+    Math.abs(queen.x - king.x) === Math.abs(queen.y - king.y)
+  );
 }
 
 /**
@@ -87,8 +91,21 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  let bool = false;
+  if (a === 0 || b === 0 || c === 0) {
+    return bool;
+  }
+  if (a === b) {
+    bool = a + b > c;
+  }
+  if (a === c) {
+    bool = a + c > b;
+  }
+  if (b === c) {
+    bool = b + c > a;
+  }
+  return bool;
 }
 
 /**
@@ -124,20 +141,8 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(numberStr) {
-  const nums = {
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    0: 'zero',
-  };
-  return nums[Number(numberStr)] || '';
+function convertNumberToString(/* numberStr */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -152,9 +157,8 @@ function convertNumberToString(numberStr) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(str) {
-  const normalWord = str.trim().toLowerCase();
-  return normalWord.split('').reverse().join('') === normalWord;
+function isPalindrome(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
