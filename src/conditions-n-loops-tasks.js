@@ -22,10 +22,7 @@
  *  -5 => false
  */
 function isPositive(number) {
-  if (number < 0) {
-    return false;
-  }
-  return true;
+  return number >= 0;
 }
 
 /**
