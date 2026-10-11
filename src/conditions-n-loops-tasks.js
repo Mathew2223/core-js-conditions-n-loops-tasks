@@ -209,7 +209,17 @@ function convertNumberToString(numberStr) {
  *  'qweqwe'    => false
  */
 function isPalindrome(str) {
-  return str.split('');
+  let isPalindromeValue = true;
+  let left = 0;
+  let right = str.length - 1;
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      isPalindromeValue = false;
+    }
+    left += 1;
+    right -= 1;
+  }
+  return isPalindromeValue;
 }
 
 /**
@@ -226,7 +236,7 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
+function getIndexOf(str, letter) {
   throw new Error('Not implemented');
 }
 
